@@ -1,0 +1,259 @@
+html,body{
+	padding:0;
+	margin:0;
+ }
+#footer {
+			height:170px;
+			width:100%;
+			background-color:#392A8F;
+			padding: 0px;
+
+
+			}
+			#main {
+			height:1000px;
+			width:100%;
+			padding: 0px;
+
+
+			}
+			#list {
+
+			height:350px;
+			width:50%;
+			margin: auto;
+			margin-left:40%;
+			top:300px;;
+			
+
+			}
+			.listproj {
+				height:150px;
+				overflow: auto;
+			}
+			#bottom {
+			height:170px;
+			width:100%;
+			background-color:#392A8F;
+			padding: 0px;
+
+
+			}
+			#add {
+			height:50px;
+			width:50%;
+			margin: auto;
+			margin-left:40%;
+			padding: 0px;
+			background-color:#392A8F;
+
+			}
+.footer{
+	 position: relative;
+	 left:88%;
+	 width:100px;
+}
+		#container {
+		position:relative;
+		width:450px;
+		height:30px;
+		left:30px;
+		top:-25px;
+		background-color:#0A0573;
+		font-size:25px;
+		}
+			ul {
+  list-style: none;
+  margin: center;
+
+}
+a {
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+#container ul li {
+
+			float: left;
+
+			}
+
+
+
+#container ul {
+	left:200px;
+}
+#container ::before{
+	content:" ";
+	position:absolute;
+	left:-29.5px;
+	border:15px solid transparent;
+	border-top-color:#0A0573;
+	border-right-color:#0A0573;
+}
+#container ::after{
+	content:" ";
+	position:absolute;
+	left:450px;
+	border:15px solid transparent;
+	border-top-color:#0A0573;
+	border-left-color:#0A0573;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	#calendar {
+		max-width: 600px;
+		margin-top:-390px;
+		margin-left:20px;
+		background-color:yellow;
+	}
+
+
+
+
+	.red{
+		border-width: 5px;
+		border-color: red;
+	}
+	.white{
+		border-width: 0px ;
+		border-color: white;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Remove margins and padding from the list */
+#list ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+#list ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+#list ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+#list ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+#list ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+#list ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+#list .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px
+}
+
+#list .close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Style the header */
+.header {
+  background-color: #f44336;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+.header>input {
+  border: none;
+  width: 100%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 100%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 1.3s;
+}
+
+cf.addBtn:hover {
+  background-color: #bbb;
+}

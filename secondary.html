@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	 <link href='scc.proj.css' rel='stylesheet' />
+</head>
+<body>
+
+
+
+
+	<div id="footer"> 
+	
+		<input type="textfield" class="footer" value="" id="login"><br>
+		<input type="textfield"  class="footer" value="" id="pasword"><br>
+		<input type="button" class="footer" name="save" onClick="b()" value="Login"><br/>
+		<button  class="footer">register</button>
+		
+	</div>
+ 
+	
+	
+	
+	
+	
+	
+	<div id="container" > 
+		
+		<ul id="nav" > 
+			
+			<li><a href="Satik (1).html">main</a></li> 
+			<li><a href="#cont2">help</a></li> 
+			<li><a href="#cont3">calendar</a></li>  
+			
+		</ul> 
+		
+	</div> 
+
+	
+	
+	
+	
+	
+	
+	<div id="todolist" > 
+		
+		<ul id="projects1" class="pr">
+			
+			<li class="li">Task</li>
+		
+		</ul>
+		
+		<ul id="projects2"class="pr">
+		
+			<li class="li">O</li>
+		
+		</ul>
+		
+		<ul id="projects3" class="pr">
+			
+			<li class="li">S</li>
+		
+		</ul>
+		
+		<ul id="projects4" class="pr">
+			
+			<li class="li">P</li>
+			
+		</ul>
+		
+		<ul id="projects5" class="pr">
+			
+			<li class="li">Result</li>
+		
+		</ul>
+		
+		<ul id="projects6" class="pr">
+			
+			<li class="li">DoneIt</li>
+		
+		</ul>
+		
+		<ul id="projects7" class="pr">
+		
+			<li class="li">Pohibka</li>
+			
+		</ul>
+		
+		
+	</div> 
+	
+	
+	
+	
+	
+	
+	
+	
+	<div id="todolistinput" > 
+		
+		<ul id="projects21" class="pr1">
+			
+			<li class="ili"><input type="textfield"  class="Task" value="" id="Task"></li>
+			
+		</ul>
+		
+		<ul id="projects22" class="pr1">
+		
+			<li class="ili"><input type="textfield"  class="O" value="" id="O"></li>
+		
+		</ul>
+		
+		<ul id="projects23" class="pr1">
+
+			<li class="ili"><input type="textfield"  class="S" value="" id="S"></li>
+		
+		</ul>
+		
+		<ul id="projects24" class="pr1">
+		
+			<li class="ili"><input type="textfield"  class="P" value="" id="P"></li>
+		
+		</ul>
+		
+		<button name="save" onclick="cd()" value="save"></button>
+		
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function cd() {
+var f = document.getElementById("Task").value;
+var c = document.getElementById("O").value;
+var d = document.getElementById("S").value;
+var b = document.getElementById("P").value;
+
+if((f.length>0)&(c.length>0)&(d.length>0)&(b.length>0)) {
+
+	var newLi = document.createElement('li');
+  newLi.innerHTML = f;
+  projects1.insertBefore(newLi, projects1.children[1]);
+
+
+	var newLi = document.createElement('li');
+  newLi.innerHTML = c;
+  projects2.insertBefore(newLi, projects2.children[1]);
+
+
+	var newLi = document.createElement('li');
+  newLi.innerHTML = d;
+  projects3.insertBefore(newLi, projects3.children[1]);
+
+
+	var newLi = document.createElement('li');
+  newLi.innerHTML = b;
+  projects4.insertBefore(newLi, projects4.children[1]);
+ 
+  var y = document.getElementById("O").value;
+  var x = document.getElementById("S").value;
+  var n = document.getElementById("P").value;
+  y=parseInt(y);
+  x=parseInt(x);
+  n=parseInt(n);
+  var u = ((x*4)+y+n)/6;
+  u = Math.round(u);
+  var newLi = document.createElement('li');
+  newLi.innerHTML = u;
+  projects5.insertBefore(newLi, projects5.children[1]);	
+  }else {
+  
+  }
+}
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
