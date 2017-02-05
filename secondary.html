@@ -3,6 +3,9 @@
 <head>
 	<title></title>
 	 <link href='scc.proj.css' rel='stylesheet' />
+
+
+	 
 </head>
 <body>
 
@@ -136,9 +139,13 @@
 
 
 <script>
-
+  var y ;
+  var x ;
+  var n ;
+  var u;
 
 function cd() {
+	var newIn=document.createElement('input');
 var f = document.getElementById("Task").value;
 var c = document.getElementById("O").value;
 var d = document.getElementById("S").value;
@@ -161,30 +168,38 @@ if((f.length>0)&(c.length>0)&(d.length>0)&(b.length>0)) {
   projects3.insertBefore(newLi, projects3.children[1]);
 
 
-		var newLi = document.createElement('li');
+	var newLi = document.createElement('li');
   newLi.innerHTML = b;
   projects4.insertBefore(newLi, projects4.children[1]);
  
-  var y = document.getElementById("O").value;
-  var x = document.getElementById("S").value;
-  var n = document.getElementById("P").value;
+   y = document.getElementById("O").value;
+   x = document.getElementById("S").value;
+   n = document.getElementById("P").value;
   y=parseInt(y);
   x=parseInt(x);
   n=parseInt(n);
-  var u = ((x*4)+y+n)/6;
+ u = ((x*4)+y+n)/6;
   u = Math.round(u);
   var newLi = document.createElement('li');
+  var newBu = document.createElement('button');
   newLi.innerHTML = u;
-  projects5.insertBefore(newLi, projects5.children[1]);	
-  
-  
-  var input=document.createElement('input');
-input.type = 'text';
-input.name = 'valuer';
-document.body.appendChild(input);
+  projects5.insertBefore(newLi, projects5.children[1]);
+  newBu.setAttribute('onClick','ca()');
+  newIn.setAttribute('id','asc');	
+  projects6.insertBefore(newIn, projects6.children[1]);
+   projects6.insertBefore(newBu, projects6.children[1]);
   }else {
   
   }
+}
+function ca(){
+	var ina=document.getElementById("asc").value;
+	var pox=u-ina;
+	var newLi = document.createElement('li');
+  newLi.innerHTML = pox;
+  projects7.insertBefore(newLi, projects7.children[1]);
+
+
 }
 
 
