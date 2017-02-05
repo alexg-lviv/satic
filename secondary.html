@@ -137,7 +137,10 @@
 
 <script>
 
-
+ var y ;
+  var x ;
+  var n ;
+  var u;
 function cd() {
 var f = document.getElementById("Task").value;
 var c = document.getElementById("O").value;
@@ -165,31 +168,39 @@ if((f.length>0)&(c.length>0)&(d.length>0)&(b.length>0)) {
   newLi.innerHTML = b;
   projects4.insertBefore(newLi, projects4.children[1]);
  
-  var y = document.getElementById("O").value;
-  var x = document.getElementById("S").value;
-  var n = document.getElementById("P").value;
+  y = document.getElementById("O").value;
+  x = document.getElementById("S").value;
+  n = document.getElementById("P").value;
   y=parseInt(y);
   x=parseInt(x);
   n=parseInt(n);
-  var u = ((x*4)+y+n)/6;
+ u = ((x*4)+y+n)/6;
   u = Math.round(u);
   var newLi = document.createElement('li');
   newLi.innerHTML = u;
   projects5.insertBefore(newLi, projects5.children[1]);	
   
 
-  var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
-  var input=document.createElement('input');
-input.type = 'text';
-input.name = 'valuer';
-document.body.appendChild(input);
+ var input=document.createElement('input');
+ input.setAttribute('id','sde');
+  projects6.insertBefore(input, projects6.children[1]);	
+var button=document.createElement('button');
+projects6.insertBefore(button, projects6.children[1]);	
+button.setAttribute('onClick','dc()');
+
   }else {
   
   }
 }
 
+function dc(){
+var dji=document.getElementById("sde").value;
 
+var shhj=u-dji;
+var newLi = document.createElement('li');
+  newLi.innerHTML = shhj;
+  projects7.insertBefore(newLi, projects7.children[1]);	
+} 
 
 </script>
 
