@@ -72,7 +72,8 @@ var element = document.getElementById("myInput");
 
 
               // Create a "close" button and append it to each list item
-              var myNodelist = document.getElementsByTagName("LI");
+              var myNodelist = Document.getElementsByClassName("abc")
+
               var i;
               for (i = 0; i < myNodelist.length; i++) {
                 var span = document.createElement("SPAN");
@@ -116,6 +117,7 @@ var element = document.getElementById("myInput");
                 var a = document.createElement("a");
                 ul.appendChild(li);
                 a.appendChild(t);
+                li.setAttribute('class','abc');
                 li.insertBefore(a,li.firstChild);
 
                 a.setAttribute('href','secondary.html');
