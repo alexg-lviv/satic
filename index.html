@@ -7,6 +7,7 @@
 
   
         <link href='main.css' rel='stylesheet' />
+        <link href='index.css' rel='stylesheet' />
         <link href='calendar/fullcalendar.min.css' rel='stylesheet' />
         <link href='calendar/fullcalendar.print.min.css' rel='stylesheet' media='print' />
         <script src='calendar/lib/moment.min.js'></script>
@@ -14,19 +15,13 @@
         <script src='calendar/fullcalendar.min.js'></script>
 
 </head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <body>
  <div id="footer">
  <div id="log">
-
+	
  <input type="textfield" class="footeru" value="" id="login" placeholder="Login..."><br>
- <input type="textfield"  class="footerp" value="" id="pasword" placeholder="Password..."><img src="pic/arrow.png" class="arrow"><br>
+ <input type="textfield"  class="footerp" value="" id="pasword" placeholder="Password..."><br>
 
 <a  class="footer2" onclick="reg()">register</a>
 </div>
@@ -72,7 +67,8 @@
 
 
 <script>
-var element = document.getElementById("adpr");
+
+var element = document.getElementById("myInput");
 
 
               // Create a "close" button and append it to each list item
