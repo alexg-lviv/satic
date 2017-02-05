@@ -28,8 +28,8 @@
 		
 		<ul id="nav" > 
 			
-			<li><a href="Satik (1).html">main</a></li> 
-			<li><a href="#cont2">help</a></li> 
+			<li><a href="teem.html">main</a></li> 
+			<li><a href="Satik (1).html">help</a></li> 
 			<li><a href="#cont3">calendar</a></li>  
 			
 		</ul> 
@@ -95,43 +95,40 @@
 	
 	
 	
+			
+		
 	
-	<div id="todolistinput" > 
 		
-		<ul id="projects21" class="pr1">
+		
+
+
+
+
+
+
+
+
+
+
+
+
+		<div id="list" >
+		
+		 <div id="myDIV" class="header">
+		 <input type="textfield"  class="Task" value="" id="Task">
+
+			<input type="textfield"  class="O" value="" id="O">
+
+			<input type="textfield"  class="S" value="" id="S">
+		
+			<input type="textfield"  class="P" value="" id="P">
+            
+			<span onclick="cd()" class="addBtn">Add</span>
+            
+          </div>
 			
-			<li class="ili"><input type="textfield"  class="Task" value="" id="Task"></li>
-			
-		</ul>
-		
-		<ul id="projects22" class="pr1">
-		
-			<li class="ili"><input type="textfield"  class="O" value="" id="O"></li>
-		
-		</ul>
-		
-		<ul id="projects23" class="pr1">
 
-			<li class="ili"><input type="textfield"  class="S" value="" id="S"></li>
-		
-		</ul>
-		
-		<ul id="projects24" class="pr1">
-		
-			<li class="ili"><input type="textfield"  class="P" value="" id="P"></li>
-		
-		</ul>
-		
-		<button name="save" onclick="cd()" value="save"></button>
-		
-	</div>
-
-
-
-
-
-
-
+			</div>
 
 
 
@@ -139,6 +136,8 @@
 
 
 <script>
+
+
 function cd() {
 var f = document.getElementById("Task").value;
 var c = document.getElementById("O").value;
@@ -162,7 +161,7 @@ if((f.length>0)&(c.length>0)&(d.length>0)&(b.length>0)) {
   projects3.insertBefore(newLi, projects3.children[1]);
 
 
-	var newLi = document.createElement('li');
+		var newLi = document.createElement('li');
   newLi.innerHTML = b;
   projects4.insertBefore(newLi, projects4.children[1]);
  
@@ -177,6 +176,12 @@ if((f.length>0)&(c.length>0)&(d.length>0)&(b.length>0)) {
   var newLi = document.createElement('li');
   newLi.innerHTML = u;
   projects5.insertBefore(newLi, projects5.children[1]);	
+  
+  
+  var input=document.createElement('input');
+input.type = 'text';
+input.name = 'valuer';
+document.body.appendChild(input);
   }else {
   
   }
