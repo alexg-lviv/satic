@@ -192,9 +192,14 @@ if((f.length>0)&(c.length>0)&(d.length>0)&(b.length>0)) {
  
  input.setAttribute('id','sde');
 button.setAttribute('onClick','dc()');
+projects6.insertBefore(newLi, projects6.children[1]);
 
+
+var newLi = document.createElement('li');
+newLi.innerHTML="enter the field"
+projects7.insertBefore(newLi, projects7.children[1]);
   }else {
-  var ul = document.getElementById("myUL");  
+  
 
 
                
@@ -206,16 +211,20 @@ function dc(){
 var dji=document.getElementById("sde").value;
 
 var shhj=u-dji;
-var newLi = document.createElement('li');
-  newLi.innerHTML = shhj;
-  projects7.insertBefore(newLi, projects7.children[1]);
+
  
 
-  
-  projects6.children[1] = this.parentElement;
+  for(i=1;i<5;i++) {
+		if(typeof(projects6.children[i])!=	"undefined"){
+ projects6.children[1] = this.parentElement;
   projects6.children[1].style.display = "none";
   
-    
+   projects7.children[1] = this.parentElement;
+  projects7.children[1].style.display = "none";
+    }}
+	var newLi = document.createElement('li');
+  newLi.innerHTML = shhj;
+  projects7.insertBefore(newLi, projects7.children[1]);
 
 var newLi = document.createElement('li'); 
 newLi.innerHTML = dji; 
