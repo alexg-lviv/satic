@@ -191,7 +191,6 @@ if((f.length>0)&(c.length>0)&(d.length>0)&(b.length>0)) {
  newLi.appendChild(button);
  
  input.setAttribute('id','sde');
-  
 button.setAttribute('onClick','dc()');
 
   }else {
@@ -203,12 +202,24 @@ button.setAttribute('onClick','dc()');
 }
 
 function dc(){
+
 var dji=document.getElementById("sde").value;
 
 var shhj=u-dji;
 var newLi = document.createElement('li');
   newLi.innerHTML = shhj;
-  projects7.insertBefore(newLi, projects7.children[1]);	
+  projects7.insertBefore(newLi, projects7.children[1]);
+ 
+
+  
+  projects6.children[1] = this.parentElement;
+  projects6.children[1].style.display = "none";
+  
+    
+
+var newLi = document.createElement('li'); 
+newLi.innerHTML = dji; 
+projects6.insertBefore(newLi, projects6.children[1]);	
 } 
 
 </script>
