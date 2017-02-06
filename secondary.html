@@ -180,17 +180,25 @@ if((f.length>0)&(c.length>0)&(d.length>0)&(b.length>0)) {
   var newLi = document.createElement('li');
   newLi.innerHTML = u;
   projects5.insertBefore(newLi, projects5.children[1]);	
-  
-
+  //how much time you spend
+ var newLi = document.createElement('li');
  var input=document.createElement('input');
+ var button=document.createElement('button');
+ 
+  var ul = document.getElementById("projects6");
+ ul.appendChild(newLi);
+ newLi.appendChild(input);
+ newLi.appendChild(button);
+ 
  input.setAttribute('id','sde');
-  projects6.insertBefore(input, projects6.children[1]);	
-var button=document.createElement('button');
-projects6.insertBefore(button, projects6.children[1]);	
+  
 button.setAttribute('onClick','dc()');
 
   }else {
-  
+  var ul = document.getElementById("myUL");  
+
+
+               
   }
 }
 
