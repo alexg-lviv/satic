@@ -11,7 +11,10 @@
 					width:100%;
 					background-color:#CFF24B;
 					padding: 0px;
-
+					 box-shadow: 3px 3px 50px  25px rgba(0, 0, 0, .1) inset, 
+					  0 6px 4px -4px rgba(0, 0, 0, .2);
+					  
+					 
 
 					}
 					
@@ -25,11 +28,12 @@
 					top:-25px;
 					background-color:#6E8C00;
 					font-size:25px;
+					
 					}
 					ul {
 					  list-style: none;
 					  margin: center;
-
+	
 					}
 					
 					
@@ -81,6 +85,8 @@
 						 margin-top:25px;
 						 border:none;
 						 border-color:#6E8C00;
+						  
+
 						 
 					}
 					.footerp{
@@ -92,7 +98,8 @@
 						 margin-top:10px;
 						 border:none;
 						 border-color:#6E8C00;
-						 
+						  
+
 					}
 					.footer:hover {
 						 border-color:red;
