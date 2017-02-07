@@ -70,7 +70,7 @@
 
 var element = document.getElementById("myInput");
 
-
+				
               // Create a "close" button and append it to each list item
               var myNodelist = document.getElementsByClassName("abc")
 
@@ -103,14 +103,25 @@ var element = document.getElementById("myInput");
 
               // Create a new list item when clicking on the "Add" button
               function newElement() {
-                 var a = document.createElement("A");
-                var li = document.createElement("li");
-                var inputValue = document.getElementById("myInput").value;
+                 
+				
+				
+				 
+				var o = document.getElementById("myInput").value;
+				localStorage.setItem("projname", o);
+					
+				 var inputValue = localStorage.getItem("projname");
+             
+				
+				
                 var t = document.createTextNode(inputValue);
                 
+
                 if (inputValue === '') {
                   alert("You must write something!");
                 } else {
+				var a = document.createElement("A");
+                var li = document.createElement("li");
                  var ul = document.getElementById("myUL");  
 
 
@@ -121,7 +132,7 @@ var element = document.getElementById("myInput");
                 li.insertBefore(a,li.firstChild);
 
                 a.setAttribute('href','secondary.html');
-                }
+                
                 document.getElementById("myInput").value = "";
 
                 var span = document.createElement("SPAN");
@@ -129,14 +140,55 @@ var element = document.getElementById("myInput");
                 span.className = "close";
                 span.appendChild(txt);
                 li.appendChild(span);
+					}
+					
+					
+					
+                
+              }   
+			  function load() {
+			  var a = document.createElement("A");
+                var li = document.createElement("li");
+			  var len = localStorage.length;
+				if(len!=0){
+				 
+				
+				 var inputValue = localStorage.getItem("projname");
+				
+			   var t = document.createTextNode(inputValue);
+                
 
-                for (i = 0; i < close.length; i++) {
+                 
+                 var ul = document.getElementById("myUL");  
+                var a = document.createElement("a");
+                ul.appendChild(li);
+                a.appendChild(t);
+                li.setAttribute('class','abc');
+                li.insertBefore(a,li.firstChild);
+
+                a.setAttribute('href','secondary.html');
+                
+              
+
+                var span = document.createElement("SPAN");
+                var txt = document.createTextNode("\u00D7");
+                span.className = "close";
+                span.appendChild(txt);
+                li.appendChild(span);
+				
+				
+				for (i = 0; i < close.length; i++) {
                   close[i].onclick = function() {
                     var div = this.parentElement;
                     div.style.display = "none";
                   }
                 }
-              }   
+			  
+			  }}
+			  function load1() {
+			  localStorage.clear();
+			  }
+			  load()
 
 </script>
 
