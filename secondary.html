@@ -47,49 +47,77 @@
 	
 	
 	<div id="todolist" > 
+	<div id="tasks" > 
+	<ul>
+			
+			<li class="tasks">Task</li>
 		
+	
+		
+			<li class="tasks">O</li>
+		
+		
+			
+			<li class="tasks">S</li>
+	
+		
+			<li class="tasks">P</li>
+			
+		
+			
+			<li class="tasks">Result</li>
+		
+			
+			<li class="tasks">DoneIt</li>
+		
+		
+		
+			<li class="tasks">Pohibka</li>
+			
+		</ul>
+	</div>
+			<div id="hed" > 
 		<ul id="projects1" class="pr">
 			
-			<li class="li">Task</li>
 		
 		</ul>
 		
 		<ul id="projects2"class="pr">
 		
-			<li class="li">O</li>
+
 		
 		</ul>
 		
 		<ul id="projects3" class="pr">
 			
-			<li class="li">S</li>
+
 		
 		</ul>
 		
 		<ul id="projects4" class="pr">
 			
-			<li class="li">P</li>
+	
 			
 		</ul>
 		
 		<ul id="projects5" class="pr">
 			
-			<li class="li">Result</li>
+		
 		
 		</ul>
 		
 		<ul id="projects6" class="pr">
 			
-			<li class="li">DoneIt</li>
+			
 		
 		</ul>
 		
 		<ul id="projects7" class="pr">
 		
-			<li class="li">Pohibka</li>
+			
 			
 		</ul>
-		
+		</div>
 		
 	</div> 
 	
@@ -155,22 +183,22 @@ if((f.length>0)&(c.length>0)&(d.length>0)&(b.length>0)) {
 
 	var newLi = document.createElement('li');
   newLi.innerHTML = f;
-  projects1.insertBefore(newLi, projects1.children[1]);
+  projects1.insertBefore(newLi, projects1.children[0]);
 
 
 	var newLi = document.createElement('li');
   newLi.innerHTML = c;
-  projects2.insertBefore(newLi, projects2.children[1]);
+  projects2.insertBefore(newLi, projects2.children[0]);
 
 
 	var newLi = document.createElement('li');
   newLi.innerHTML = d;
-  projects3.insertBefore(newLi, projects3.children[1]);
+  projects3.insertBefore(newLi, projects3.children[0]);
 
 
 		var newLi = document.createElement('li');
   newLi.innerHTML = b;
-  projects4.insertBefore(newLi, projects4.children[1]);
+  projects4.insertBefore(newLi, projects4.children[0]);
  
   y = document.getElementById("O").value;
   x = document.getElementById("S").value;
@@ -182,7 +210,7 @@ if((f.length>0)&(c.length>0)&(d.length>0)&(b.length>0)) {
   u = Math.round(u);
   var newLi = document.createElement('li');
   newLi.innerHTML = u;
-  projects5.insertBefore(newLi, projects5.children[1]);	
+  projects5.insertBefore(newLi, projects5.children[0]);	
   //how much time you spend
  var newLi = document.createElement('li');
  var input=document.createElement('input');
@@ -195,12 +223,12 @@ if((f.length>0)&(c.length>0)&(d.length>0)&(b.length>0)) {
  
  input.setAttribute('id','sde');
 button.setAttribute('onClick','dc()');
-projects6.insertBefore(newLi, projects6.children[1]);
+projects6.insertBefore(newLi, projects6.children[0]);
 
 
 var newLi = document.createElement('li');
 newLi.innerHTML="enter the field"
-projects7.insertBefore(newLi, projects7.children[1]);
+projects7.insertBefore(newLi, projects7.children[0]);
   }else {
   
 
@@ -217,13 +245,13 @@ var shhj=u-dji;
 
  
 
-  for(i=1;i<5;i++) {
+  for(i=0;i<5;i++) {
 		if(typeof(projects6.children[i])!=	"undefined"){
- projects6.children[1] = this.parentElement;
-  projects6.children[1].style.display = "none";
+ projects6.children[0] = this.parentElement;
+  projects6.children[0].style.display = "none";
   
-   projects7.children[1] = this.parentElement;
-  projects7.children[1].style.display = "none";
+   projects7.children[0] = this.parentElement;
+  projects7.children[0].style.display = "none";
     }}
 	var newLi = document.createElement('li');
   newLi.innerHTML = shhj;
