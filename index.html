@@ -159,7 +159,7 @@ var element = document.getElementById("myInput");
 				 
 				
 				 var inputValue = localStorage.getItem(p);
-				
+				if(inputValue !== null){
 			   var t = document.createTextNode(inputValue);
                 
 
@@ -180,9 +180,10 @@ var element = document.getElementById("myInput");
                 span.className = "close";
                 span.appendChild(txt);
                 li.appendChild(span);
+				}
 				p++;
 				
-				if(p<4){
+				if(p<10){
 				load()
 				}
 				
