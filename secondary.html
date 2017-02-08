@@ -173,29 +173,43 @@ var y;
 var x;
 var n;
 var u;
-var j;
+var j =0;
 var TaskMAsk = "tm_";
 var OMAsk = "om_";
 var SMAsk = "sm_";
 var PMAsk = "pm_";
 var DMAsk = "dm_";
 var HMAsk = "hm_";
-
+var k=0;
 
 function cd() {
-  j = 0;
+  
+  
+  for(i=0;i<10;i++){
+  var m = localStorage.getItem(TaskMAsk + i);
+  if (m == null) {
+   k = i;
+  console.log(k)
+  i=10;
+  } else {
+ 
+  }
+  }
+  
   var f = document.getElementById("Task").value;
   var c = document.getElementById("O").value;
   var d = document.getElementById("S").value;
   var b = document.getElementById("P").value;
-  localStorage.setItem(TaskMAsk + j, f);
-  localStorage.setItem(OMAsk + j, c);
-  localStorage.setItem(SMAsk + j, d);
-  localStorage.setItem(PMAsk + j, b);
-  f = localStorage.getItem(TaskMAsk + "0");
-  c = localStorage.getItem(OMAsk + "0");
-  d = localStorage.getItem(SMAsk + "0");
-  b = localStorage.getItem(PMAsk + "0");
+  localStorage.setItem(TaskMAsk + k, f);
+  localStorage.setItem(OMAsk + k, c);
+  localStorage.setItem(SMAsk + k, d);
+  localStorage.setItem(PMAsk + k, b);
+  
+  
+  f = localStorage.getItem(TaskMAsk + k);
+  c = localStorage.getItem(OMAsk + k);
+  d = localStorage.getItem(SMAsk + k);
+  b = localStorage.getItem(PMAsk + k);
 
 
   var newLi = document.createElement('li');
@@ -246,6 +260,10 @@ function cd() {
   var newLi = document.createElement('li');
   newLi.innerHTML = "enter the field"
   projects7.insertBefore(newLi, projects7.children[0]);
+  
+  
+  
+  
 
 }
 
@@ -256,13 +274,23 @@ function cd() {
 
 
 function load() {
-  j = projects1.children.length;
+ for(i=0;i<10;i++){
+  var m = localStorage.getItem(TaskMAsk + i);
+  if (m == null) {
+   k = i;
+  console.log(k)
+  i=10;
+  } else {
+ 
+  }
+  }
+  
+for(e=0;e<k;e++){
 
-
-  var f = localStorage.getItem(TaskMAsk + "0");
-  var c = localStorage.getItem(OMAsk + "0");
-  var d = localStorage.getItem(SMAsk + "0");
-  var b = localStorage.getItem(PMAsk + "0");
+  var f = localStorage.getItem(TaskMAsk + e);
+  var c = localStorage.getItem(OMAsk + e);
+  var d = localStorage.getItem(SMAsk + e);
+  var b = localStorage.getItem(PMAsk + e);
 if(f.length>0){
   var newLi = document.createElement('li');
   newLi.innerHTML = f;
@@ -316,19 +344,20 @@ if(f.length>0){
   newLi.innerHTML = "enter the field"
   projects7.insertBefore(newLi, projects7.children[0]);
 
-  
+   
 
-  shhj = localStorage.getItem(DMAsk + "0");
+  shhj = localStorage.getItem(DMAsk + e);
   var newLi = document.createElement('li');
   newLi.innerHTML = shhj;
   projects7.insertBefore(newLi, projects7.children[1]);
 
-  dji = localStorage.getItem(HMAsk + "0");
+  dji = localStorage.getItem(HMAsk + e);
   var newLi = document.createElement('li');
   newLi.innerHTML = dji;
   projects6.insertBefore(newLi, projects6.children[1]);
 	
-  for (i = 0; i < 5; i++) {
+ 
+for (i = 0; i < 5; i++) {
     if (typeof(projects6.children[i]) != "undefined") {
       projects6.children[0] = this.parentElement;
       projects6.children[0].style.display = "none";
@@ -338,8 +367,7 @@ if(f.length>0){
     }
   }
 
-
-}
+}}
 }
 load()
 
@@ -352,6 +380,17 @@ load()
 
 
 function dc() {
+
+for(i=0;i<10;i++){
+  var m = localStorage.getItem(TaskMAsk + i);
+  if (m == null) {
+   k = i-1;
+  console.log(k)
+  i=10;
+  } else {
+ 
+  }
+  }
 
   var dji = document.getElementById("sde").value;
 
@@ -368,14 +407,14 @@ function dc() {
       projects7.children[0].style.display = "none";
     }
   }
-  localStorage.setItem(DMAsk + "0", shhj);
-  shhj = localStorage.getItem(DMAsk + "0");
+  localStorage.setItem(DMAsk + k, shhj);
+  shhj = localStorage.getItem(DMAsk + k);
   var newLi = document.createElement('li');
   newLi.innerHTML = shhj;
   projects7.insertBefore(newLi, projects7.children[1]);
 
-  localStorage.setItem(HMAsk + "0", dji);
-  dji = localStorage.getItem(HMAsk + "0");
+  localStorage.setItem(HMAsk + k, dji);
+  dji = localStorage.getItem(HMAsk + k);
   var newLi = document.createElement('li');
   newLi.innerHTML = dji;
   projects6.insertBefore(newLi, projects6.children[1]);
