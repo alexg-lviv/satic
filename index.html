@@ -67,7 +67,7 @@
 
 
 <script>
-
+var j;
 var element = document.getElementById("myInput");
 
 				
@@ -106,7 +106,7 @@ var element = document.getElementById("myInput");
                  
 		
 				
-				 var j = myUL.children.length;
+				 j = myUL.children.length;
 				 
 				var o = document.getElementById("myInput").value;
 				localStorage.setItem(j, o);
@@ -144,7 +144,12 @@ var element = document.getElementById("myInput");
                 span.appendChild(txt);
                 li.appendChild(span);
 					}
-					
+					for (i = 0; i < close.length; i++) {
+                  close[i].onclick = function() {
+                    var div = this.parentElement;
+                    div.style.display = "none";
+                  }
+                }
 					
 					
                 
@@ -189,9 +194,15 @@ var element = document.getElementById("myInput");
 				
 				for (i = 0; i < close.length; i++) {
                   close[i].onclick = function() {
+				  
                     var div = this.parentElement;
-                    div.style.display = "none";
-                  }
+					
+					div.style.display = "none";
+					
+					localStorage.removeItem("0");
+                  
+				  
+				  }
                 }
 			  
 			  }

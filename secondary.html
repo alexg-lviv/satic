@@ -169,99 +169,217 @@
 
 <script>
 
- var y ;
-  var x ;
-  var n ;
-  var u;
+var y;
+var x;
+var n;
+var u;
+var j;
+var TaskMAsk = "tm_";
+var OMAsk = "om_";
+var SMAsk = "sm_";
+var PMAsk = "pm_";
+var DMAsk = "dm_";
+var HMAsk = "hm_";
+
+
 function cd() {
-var f = document.getElementById("Task").value;
-var c = document.getElementById("O").value;
-var d = document.getElementById("S").value;
-var b = document.getElementById("P").value;
+  j = 0;
+  var f = document.getElementById("Task").value;
+  var c = document.getElementById("O").value;
+  var d = document.getElementById("S").value;
+  var b = document.getElementById("P").value;
+  localStorage.setItem(TaskMAsk + j, f);
+  localStorage.setItem(OMAsk + j, c);
+  localStorage.setItem(SMAsk + j, d);
+  localStorage.setItem(PMAsk + j, b);
+  f = localStorage.getItem(TaskMAsk + "0");
+  c = localStorage.getItem(OMAsk + "0");
+  d = localStorage.getItem(SMAsk + "0");
+  b = localStorage.getItem(PMAsk + "0");
 
-if((f.length>0)&(c.length>0)&(d.length>0)&(b.length>0)) {
 
-	var newLi = document.createElement('li');
+  var newLi = document.createElement('li');
   newLi.innerHTML = f;
   projects1.insertBefore(newLi, projects1.children[0]);
 
 
-	var newLi = document.createElement('li');
+  var newLi = document.createElement('li');
   newLi.innerHTML = c;
   projects2.insertBefore(newLi, projects2.children[0]);
 
 
-	var newLi = document.createElement('li');
+  var newLi = document.createElement('li');
   newLi.innerHTML = d;
   projects3.insertBefore(newLi, projects3.children[0]);
 
 
-		var newLi = document.createElement('li');
+  var newLi = document.createElement('li');
   newLi.innerHTML = b;
   projects4.insertBefore(newLi, projects4.children[0]);
- 
+
   y = document.getElementById("O").value;
   x = document.getElementById("S").value;
   n = document.getElementById("P").value;
-  y=parseInt(y);
-  x=parseInt(x);
-  n=parseInt(n);
- u = ((x*4)+y+n)/6;
+  y = parseInt(y);
+  x = parseInt(x);
+  n = parseInt(n);
+  u = ((x * 4) + y + n) / 6;
   u = Math.round(u);
   var newLi = document.createElement('li');
   newLi.innerHTML = u;
-  projects5.insertBefore(newLi, projects5.children[0]);	
+  projects5.insertBefore(newLi, projects5.children[0]);
   //how much time you spend
- var newLi = document.createElement('li');
- var input=document.createElement('input');
- var button=document.createElement('button');
- 
+  var newLi = document.createElement('li');
+  var input = document.createElement('input');
+  var button = document.createElement('button');
+
   var ul = document.getElementById("projects6");
- ul.appendChild(newLi);
- newLi.appendChild(input);
- newLi.appendChild(button);
- 
- input.setAttribute('id','sde');
-button.setAttribute('onClick','dc()');
-projects6.insertBefore(newLi, projects6.children[0]);
+  ul.appendChild(newLi);
+  newLi.appendChild(input);
+  newLi.appendChild(button);
+
+  input.setAttribute('id', 'sde');
+  button.setAttribute('onClick', 'dc()');
+  projects6.insertBefore(newLi, projects6.children[0]);
 
 
-var newLi = document.createElement('li');
-newLi.innerHTML="enter the field"
-projects7.insertBefore(newLi, projects7.children[0]);
-  }else {
-  
+  var newLi = document.createElement('li');
+  newLi.innerHTML = "enter the field"
+  projects7.insertBefore(newLi, projects7.children[0]);
 
-
-               
-  }
 }
 
-function dc(){
 
-var dji=document.getElementById("sde").value;
 
-var shhj=u-dji;
 
- 
 
-  for(i=0;i<5;i++) {
-		if(typeof(projects6.children[i])!=	"undefined"){
- projects6.children[0] = this.parentElement;
-  projects6.children[0].style.display = "none";
+
+
+function load() {
+  j = projects1.children.length;
+
+
+  var f = localStorage.getItem(TaskMAsk + "0");
+  var c = localStorage.getItem(OMAsk + "0");
+  var d = localStorage.getItem(SMAsk + "0");
+  var b = localStorage.getItem(PMAsk + "0");
+if(f.length>0){
+  var newLi = document.createElement('li');
+  newLi.innerHTML = f;
+  projects1.insertBefore(newLi, projects1.children[0]);
+
+  var newLi = document.createElement('li');
+  newLi.innerHTML = c;
+  projects2.insertBefore(newLi, projects2.children[0]);
+
+
+  var newLi = document.createElement('li');
+  newLi.innerHTML = d;
+  projects3.insertBefore(newLi, projects3.children[0]);
+
+
+  var newLi = document.createElement('li');
+  newLi.innerHTML = b;
+  projects4.insertBefore(newLi, projects4.children[0]);
+
+
+  y = c
+  x = d
+  n = b
+  y = parseInt(y);
+  x = parseInt(x);
+  n = parseInt(n);
+  u = ((x * 4) + y + n) / 6;
+  u = Math.round(u);
+  var newLi = document.createElement('li');
+  newLi.innerHTML = u;
+  projects5.insertBefore(newLi, projects5.children[0]);
+
+
+
+
+  var newLi = document.createElement('li');
+  var input = document.createElement('input');
+  var button = document.createElement('button');
+
+  var ul = document.getElementById("projects6");
+  ul.appendChild(newLi);
+  newLi.appendChild(input);
+  newLi.appendChild(button);
+
+  input.setAttribute('id', 'sde');
+  button.setAttribute('onClick', 'dc()');
+  projects6.insertBefore(newLi, projects6.children[0]);
+
+
+  var newLi = document.createElement('li');
+  newLi.innerHTML = "enter the field"
+  projects7.insertBefore(newLi, projects7.children[0]);
+
   
-   projects7.children[0] = this.parentElement;
-  projects7.children[0].style.display = "none";
-    }}
-	var newLi = document.createElement('li');
+
+  shhj = localStorage.getItem(DMAsk + "0");
+  var newLi = document.createElement('li');
   newLi.innerHTML = shhj;
   projects7.insertBefore(newLi, projects7.children[1]);
 
-var newLi = document.createElement('li'); 
-newLi.innerHTML = dji; 
-projects6.insertBefore(newLi, projects6.children[1]);	
-} 
+  dji = localStorage.getItem(HMAsk + "0");
+  var newLi = document.createElement('li');
+  newLi.innerHTML = dji;
+  projects6.insertBefore(newLi, projects6.children[1]);
+	
+  for (i = 0; i < 5; i++) {
+    if (typeof(projects6.children[i]) != "undefined") {
+      projects6.children[0] = this.parentElement;
+      projects6.children[0].style.display = "none";
 
+      projects7.children[0] = this.parentElement;
+      projects7.children[0].style.display = "none";
+    }
+  }
+
+
+}
+}
+load()
+
+
+
+
+
+
+
+
+
+function dc() {
+
+  var dji = document.getElementById("sde").value;
+
+  var shhj = u - dji;
+
+
+
+  for (i = 0; i < 5; i++) {
+    if (typeof(projects6.children[i]) != "undefined") {
+      projects6.children[0] = this.parentElement;
+      projects6.children[0].style.display = "none";
+
+      projects7.children[0] = this.parentElement;
+      projects7.children[0].style.display = "none";
+    }
+  }
+  localStorage.setItem(DMAsk + "0", shhj);
+  shhj = localStorage.getItem(DMAsk + "0");
+  var newLi = document.createElement('li');
+  newLi.innerHTML = shhj;
+  projects7.insertBefore(newLi, projects7.children[1]);
+
+  localStorage.setItem(HMAsk + "0", dji);
+  dji = localStorage.getItem(HMAsk + "0");
+  var newLi = document.createElement('li');
+  newLi.innerHTML = dji;
+  projects6.insertBefore(newLi, projects6.children[1]);
+}
 </script>
 
 
