@@ -37,7 +37,10 @@ for(i=0;i<1;i++){
 	document.getElementById('lggg').innerHTML="User: "+q;
 	
 	localStorage.setItem(ConnMask + "0", q +" "+ w);
-	
+	var button = document.createElement("button");
+	button.className = "butlogout";
+	button.setAttribute('onClick', 'out()');
+	document.getElementById('lggg').appendChild(button);
 	
 	
 	}
@@ -74,7 +77,10 @@ function load() {
 	document.getElementById('log' ).style.display = 'none';
 	document.getElementById('lggg').innerHTML="User: "+e;
 	
-	
+	var button = document.createElement("button");
+	button.className = "butlogout";
+	button.setAttribute('onClick', 'out()');
+	document.getElementById('lggg').appendChild(button);
 	
 	
 	
@@ -83,4 +89,10 @@ function load() {
   }
 
 }
+	function out() {
+		
+		localStorage.removeItem("conm_0");
+		location.reload();
+	
+	}
 load()
