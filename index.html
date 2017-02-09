@@ -67,11 +67,12 @@
 
 </body>
 
-
+<script src="Scripts/login.js"></script>
 <script>
-var j;
+var j,e;
+var ConnMask="conm_";
 
-var element = document.getElementById("myInput");
+			var element = document.getElementById("myInput");
 
 				
               // Create a "close" button and append it to each list item
@@ -106,7 +107,18 @@ var element = document.getElementById("myInput");
 
               // Create a new list item when clicking on the "Add" button
               function newElement() {
-                 
+                 e="";
+	
+
+	
+	for(i=0;i<1;i++){
+  var m = localStorage.getItem(ConnMask + i);
+	
+	
+	
+	
+
+	if(m!==null){
 		
 				
 				 j = myUL.children.length;
@@ -156,13 +168,36 @@ var element = document.getElementById("myInput");
 					
 					
                 
-              }  
+              }else {
+			  document.getElementById("myInput").value = "";
+			  alert("Please sign in your account")
+			  }}}  
 			  var p = 0;
 			  
 			  
 			  //load function-----------------------------------------------------
 			  function load() {
-			
+			  e="";
+	
+
+
+	for(i=0;i<1;i++){
+  var m = localStorage.getItem(ConnMask + i);
+	for(u=0;u<m.length;u++){
+	if(m[u]!=" "){
+	e = e + m[u];
+
+	
+	} else {
+		r = u+1;
+		u=m.length;
+	}
+	}
+	
+	
+	
+	//alert("log "+e);
+	if(e!=""){
 			  var a = document.createElement("A");
                 var li = document.createElement("li");
 			  var len = localStorage.length;
@@ -217,7 +252,7 @@ var element = document.getElementById("myInput");
 			  
 			  
 			
-			  }
+			  }}}
 			  function load1() {
 			  localStorage.clear();
 			  }
@@ -225,7 +260,7 @@ var element = document.getElementById("myInput");
 
 </script>
 
-<script src="Scripts/login.js"></script>
+
 <script>
 
   $(document).ready(function() {

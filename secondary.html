@@ -167,7 +167,7 @@
 
 
 
-
+<script src="Scripts/login.js"></script>
 
 <script>
 
@@ -276,6 +276,19 @@ function cd() {
 
 
 function load() {
+ var e="";
+var ConnMask="conm_";	
+
+
+	for(i=0;i<1;i++){
+  var m = localStorage.getItem(ConnMask + i);
+	
+	
+	
+	
+	//alert("log "+e);
+	if(m!==null){
+
  for(i=0;i<10;i++){
   var m = localStorage.getItem(TaskMAsk + i);
   if (m == null) {
@@ -378,7 +391,7 @@ for (i = 0; i < 5; i++) {
 
 
   //loading user --------------------------------------------------------------------------------//
-}
+}}}
 load()
 
 
@@ -431,7 +444,7 @@ shhj = Math.abs(shhj);
 }
 </script>
 
-<script src="Scripts/login.js"></script>
+
 
 
 
