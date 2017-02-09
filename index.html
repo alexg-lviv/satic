@@ -22,11 +22,13 @@
 	
  <input type="textfield" class="footeru" value="" id="login" placeholder="Login..."><br>
  <input type="textfield"  class="footerp" value="" id="pasword" placeholder="Password..."><br>
+ <button onclick="login()" class="butreg" ></button>
 
 <a  class="footer2" onclick="reg()">register</a>
 </div>
+<div id="lggg" >
 
-
+ </div>
  </div>
 
 			<div id="container" >
@@ -68,6 +70,7 @@
 
 <script>
 var j;
+
 var element = document.getElementById("myInput");
 
 				
@@ -155,6 +158,9 @@ var element = document.getElementById("myInput");
                 
               }  
 			  var p = 0;
+			  
+			  
+			  //load function-----------------------------------------------------
 			  function load() {
 			
 			  var a = document.createElement("A");
@@ -205,6 +211,12 @@ var element = document.getElementById("myInput");
 				  }
                 }
 			  
+			  
+			  
+			  
+			  
+			  
+			
 			  }
 			  function load1() {
 			  localStorage.clear();
@@ -213,7 +225,7 @@ var element = document.getElementById("myInput");
 
 </script>
 
-
+<script src="Scripts/login.js"></script>
 <script>
 
   $(document).ready(function() {

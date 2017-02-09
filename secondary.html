@@ -15,11 +15,13 @@
 	
  <input type="textfield" class="footeru" value="" id="login" placeholder="Login..."><br>
  <input type="textfield"  class="footerp" value="" id="pasword" placeholder="Password..."><br>
+ <button onclick="login()" class="butreg" ></button>
 
 <a  class="footer2" onclick="reg()">register</a>
 </div>
+<div id="lggg" >
 
-
+ </div>
  </div>
  
 	
@@ -358,7 +360,7 @@ if(f.length>0){
 	
  
 for (i = 0; i < 5; i++) {
-    if (typeof(projects6.children[i]) != "undefined") {
+    if (typeof(projects6.children[0]) !== "undefined") {
       projects6.children[0] = this.parentElement;
       projects6.children[0].style.display = "none";
 
@@ -368,6 +370,14 @@ for (i = 0; i < 5; i++) {
   }
 
 }}
+
+
+
+
+//loading user --------------------------------------------------------------------------------
+
+
+  //loading user --------------------------------------------------------------------------------//
 }
 load()
 
@@ -421,7 +431,7 @@ for(i=0;i<10;i++){
 }
 </script>
 
-
+<script src="Scripts/login.js"></script>
 
 
 

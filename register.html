@@ -21,13 +21,11 @@
 	
  <input type="textfield" class="footeru" value="" id="login" placeholder="Login..."><br>
  <input type="textfield"  class="footerp" value="" id="pasword" placeholder="Password..."><br>
- <button onclick="login()" class="butreg" ></button>
 
 <a  class="footer2" onclick="reg()">register</a>
 </div>
-<div id="lggg" >
 
- </div>
+
  </div>
 
 
@@ -41,7 +39,13 @@
 
 			</div>
 			
+			<div id="reg" >
+				 <input type="textfield" class="loginn" value="" id="loginn" placeholder="Login..."><br>
+				<input type="textfield"  class="footerp1" value="" id="pasword1" placeholder="Password..."><br>
+				<input type="textfield"  class="footerp2" value="" id="pasword2" placeholder="Password..."><br>
+				<button onclick="reg()" class="butreg" value="Create"></button>
 
+			</div>
 
 
 				
@@ -55,7 +59,29 @@
 </body>
 
 
-<script src="Scripts/login.js"></script>
+<script>
+var q,w,e,r;
+var UMask = "um_";
+
+ function reg() {
+ q = document.getElementById("loginn").value;
+ w = document.getElementById("pasword1").value;
+ e = document.getElementById("pasword2").value;
+if(w==e){ 
+ 
+ localStorage.setItem(UMask + "0", q +" "+ w);
+ alert("Successfully registed");
+document.location.href='index.html';
+ 
+ }else {
+ document.getElementById("pasword1").value = "";
+ document.getElementById("pasword2").value = "";
+ alert("passwords are not same");
+ 
+ }
+ }
+
+</script>
 
 
 
