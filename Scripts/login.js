@@ -41,7 +41,7 @@ for(i=0;i<1;i++){
 	button.className = "butlogout";
 	button.setAttribute('onClick', 'out()');
 	document.getElementById('lggg').appendChild(button);
-	
+	location.reload();
 	
 	}
 	
@@ -92,7 +92,7 @@ function load() {
 	function out() {
 		
 		localStorage.removeItem("conm_0");
-		location.reload();
+		document.location.href='index.html';
 	
 	}
 load()
