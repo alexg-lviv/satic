@@ -19,8 +19,10 @@
   <div id="footer">
  <div id="log">
 	
- <input type="textfield" class="footeru" value="" id="login" placeholder="Login..."><br>
- <input type="textfield"  class="footerp" value="" id="pasword" placeholder="Password..."><br>
+ <input type="textfield" class="footeru" value="" id="login" maxlength="9" placeholder="Login..."><br>
+ <input type="password"  class="footerp"   id="pasword" maxlength="6" placeholder="Password..."><br>
+ <button onclick="login()" class="butreg"  >Log-in</button>
+ <button onclick="pass()" class="butreg"></button>
 
 <a  class="footer2" onclick="reg()">register</a>
 </div>
@@ -40,9 +42,9 @@
 			</div>
 			
 			<div id="reg" >
-				 <input type="textfield" class="loginn" value="" id="loginn" placeholder="Login..."><br>
-				<input type="textfield"  class="footerp1" value="" id="pasword1" placeholder="Password..."><br>
-				<input type="textfield"  class="footerp2" value="" id="pasword2" placeholder="Password..."><br>
+				 <input type="textfield" class="loginn" value="" maxlength="9" id="loginn" placeholder="Login..."><br>
+				<input type="textfield"  class="footerp1" value="" id="pasword1" maxlength="6" placeholder="Password..."><br>
+				<input type="textfield"  class="footerp2" value="" id="pasword2" maxlength="6" placeholder="Password..."><br>
 				<button onclick="reg()" class="butreg" value="Create"></button>
 
 			</div>

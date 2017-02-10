@@ -96,3 +96,52 @@ function load() {
 	
 	}
 load()
+
+
+function pass() {
+
+	var pass = document.getElementById("pasword");
+	if (pass.type == 'password') {
+	pass.type = 'text';
+	pass.value = pass.value;
+	
+	var inp = document.createElement("input");
+
+	inp.id = "pasword";
+	inp.type = "text";
+	inp.setAttribute('class', 'footerp');
+	inp.setAttribute('maxlength', '6');
+	inp.setAttribute('placeholder', 'Password...');
+	inp.maxlength="2";
+	inp.value = pass.value;
+	pass.parentNode.replaceChild(inp, pass);
+
+	}
+	
+	else {
+	
+	pass.type = 'password';
+	pass.class = 'footerp';
+	pass.value = pass.value;
+	
+	var inp = document.createElement("input");
+	
+	inp.id = id;
+	
+	inp.type = "password";
+	inp.class="footerp";
+	inp.value = pass.value;
+	inp.setAttribute('class', 'footerp');
+	inp.setAttribute('maxlength', '6');
+	inp.setAttribute('placeholder', 'Password...');
+	pass.parentNode.replaceChild(inp, pass);
+	
+	}
+
+	 //pass.maxlength="2";  id="pasword" placeholder="Password..."	
+		
+			
+					
+	} 
+
+	
